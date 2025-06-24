@@ -91,3 +91,21 @@ pre {
   margin-top: 1.5rem;
   color: var(--text-light);
 }
+
+.wireframe {
+  border: 2px dashed #aaa !important;
+  background: #fff !important;
+  color: #222 !important;
+}
+
+.wireframe input,
+.wireframe textarea {
+  border: 1px dashed #aaa !important;
+  background: #f9f9f9 !important;
+}
+
+.wireframe button {
+  border: 1px dashed #aaa !important;
+  background: #eee !important;
+  color: #222 !important;
+}

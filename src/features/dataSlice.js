@@ -10,7 +10,7 @@ export const fetchData = createAsyncThunk('data/fetchData', async () => {
 });
 
 export const fetchPosts = createAsyncThunk('data/fetchPosts', async () => {
-  const response = await fetch('https://jsonplaceholder.typicode.com/posts?_limit=10');
+  const response = await fetch('https://jsonplaceholder.typicode.com/posts?_limit=2');
   const data = await response.json();
   return data;
 });
@@ -20,12 +20,18 @@ const initialState = {
   status: 'idle',
   posts: [],
   postsStatus: 'idle',
+  localPosts: JSON.parse(localStorage.getItem('localPosts')) || [],
 };
 
 const dataSlice = createSlice({
   name: 'data',
   initialState,
-  reducers: {},
+  reducers: {
+    addPost: (state, action) => {
+      state.localPosts.push(action.payload);
+      localStorage.setItem('localPosts', JSON.stringify(state.localPosts));
+    },
+  },
   extraReducers: (builder) => {
     builder
       .addCase(fetchData.pending, (state) => {
@@ -47,8 +53,9 @@ const dataSlice = createSlice({
       })
       .addCase(fetchPosts.rejected, (state) => {
         state.postsStatus = 'failed';
-      });
+      })
   },
 });
 
 export default dataSlice.reducer;
+export const { addPost } = dataSlice.actions;

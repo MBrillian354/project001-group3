@@ -14,6 +14,7 @@ function Data() {
       <nav>
         <Link to="/">Home</Link>
         <Link to="/about">About</Link>
+        <Link to="/create">Create</Link>
       </nav>
       <button onClick={() => dispatch(fetchData())} disabled={status === 'loading'}>
         {status === 'loading' ? 'Loading...' : 'Fetch Data'}

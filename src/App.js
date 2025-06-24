@@ -7,6 +7,7 @@ import About from './About';
 import Data from './Data';
 import Posts from './Posts';
 import PostDetail from './postDetails';
+import Create from './Create';
 import './App.css';
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
               <Route path="/data" element={<Data />} />
               <Route path="/posts" element={<Posts />} />
               <Route path="/post/:id" element={<PostDetail />} />
+              <Route path="/create" element={<Create />} />
             </Routes>
           </header>
         </div>

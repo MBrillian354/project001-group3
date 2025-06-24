@@ -9,6 +9,8 @@ function Home() {
         <Link to="/about">About</Link>
         <Link to="/data">Data</Link>
         <Link to="/posts">Posts</Link> {/* Fixed closing tag */}
+        <Link to="/create">Create</Link>
+
       </nav>
       <p>This is a minimal React + Redux + Router demo.</p>
     </div>

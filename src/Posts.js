@@ -8,6 +8,19 @@ function Posts() {
     const posts = useSelector((state) => state.data.posts);
     const status = useSelector((state) => state.data.postsStatus);
 
+    // Get user-created posts from localStorage
+    const localPosts = JSON.parse(localStorage.getItem('localPosts') || '[]');
+
+    // Combine fetched posts and local posts (local posts last, so they appear newest)
+    // If fetched posts have 'id', assign unique ids to local posts
+    const allPosts = [
+        ...(Array.isArray(posts) ? posts : []),
+        ...localPosts.map((post, idx) => ({
+            ...post,
+            id: `local-${idx}` // Ensure unique key for React
+        }))
+    ];
+
     useEffect(() => {
         dispatch(fetchPosts());
     }, [dispatch]);
@@ -20,6 +33,7 @@ function Posts() {
                 <Link to="/about">About</Link>
                 <Link to="/data">Data</Link>
                 <Link to="/posts">Posts</Link>
+                <Link to="/create">Create</Link>
             </nav>
             {status === 'loading' && <p>Loading posts...</p>}
             {status === 'failed' && <p>Failed to load posts.</p>}
@@ -32,10 +46,10 @@ function Posts() {
                     marginTop: '2rem',
                 }}
             >
-                {posts && posts.map(post => (
+                {allPosts && allPosts.map(post => (
                     <Link
-                        to={`/post/${post.id}`}
-                        key={post.id}
+                        to={post.id && !String(post.id).startsWith('local-') ? `/post/${post.id}` : '#'}
+                        key={post.id || post.title + post.body}
                         style={{
                             textDecoration: 'none',
                             color: 'inherit',
