@@ -12,16 +12,20 @@ function About() {
         </h2>
 
         {/* Team Members Grid */}
-        <div className="gap-8 justify-items-center">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 justify-items-center">
 
           {/* Muhammad Brillian Syifa Qolbi */}
           <div className="text-center">
             <div className="w-24 h-24 mx-auto bg-[#800020]/20 rounded-full flex items-center justify-center mb-4">
               <i className="ri-database-2-line ri-2x text-[#800020]"></i>
             </div>
-            <div className="flex justify-center items-baseline gap-2">
-              <h3 className="text-xl font-bold text-[#800020]">Muhammad Brillian Syifa Qolbi</h3>
-              <p className="text-gray-400 text-sm">(University of Singaperbangsa Karawang)</p>
+            <div className="flex justify-center items-center gap-2 flex-wrap">
+              <h3 className="text-xl font-bold text-[#800020] whitespace-nowrap">
+                Muhammad Brillian Syifa Qolbi
+              </h3>
+              <span className="text-gray-400 text-sm whitespace-nowrap">
+                (University of Singaperbangsa Karawang)
+              </span>
             </div>
           </div>
 
@@ -30,9 +34,13 @@ function About() {
             <div className="w-24 h-24 mx-auto bg-[#800020]/20 rounded-full flex items-center justify-center mb-4">
               <i className="ri-bar-chart-box-line ri-2x text-[#800020]"></i>
             </div>
-            <div className="flex justify-center items-baseline gap-2">
-              <h3 className="text-xl font-bold text-[#800020]">Muhammad Yusuf Firizki</h3>
-              <p className="text-gray-400 text-sm">(President University)</p>
+            <div className="flex justify-center items-center gap-2 flex-wrap">
+              <h3 className="text-xl font-bold text-[#800020] whitespace-nowrap">
+                Muhammad Yusuf Firizki
+              </h3>
+              <span className="text-gray-400 text-sm whitespace-nowrap">
+                (President University)
+              </span>
             </div>
           </div>
 
@@ -41,9 +49,13 @@ function About() {
             <div className="w-24 h-24 mx-auto bg-[#800020]/20 rounded-full flex items-center justify-center mb-4">
               <i className="ri-ai-generate ri-2x text-[#800020]"></i>
             </div>
-            <div className="flex justify-center items-baseline gap-2">
-              <h3 className="text-xl font-bold text-[#800020]">Ni Putu Dadia Yasuarini</h3>
-              <p className="text-gray-400 text-sm">(President University)</p>
+            <div className="flex justify-center items-center gap-2 flex-wrap">
+              <h3 className="text-xl font-bold text-[#800020] whitespace-nowrap">
+                Ni Putu Dadia Yasuarini
+              </h3>
+              <span className="text-gray-400 text-sm whitespace-nowrap">
+                (President University)
+              </span>
             </div>
           </div>
 
@@ -52,9 +64,13 @@ function About() {
             <div className="w-24 h-24 mx-auto bg-[#800020]/20 rounded-full flex items-center justify-center mb-4">
               <i className="ri-ai-generate ri-2x text-[#800020]"></i>
             </div>
-            <div className="flex justify-center items-baseline gap-2">
-              <h3 className="text-xl font-bold text-[#800020]">Rezha Octaryanto</h3>
-              <p className="text-gray-400 text-sm">(Universitas Gadjah Mada)</p>
+            <div className="flex justify-center items-center gap-2 flex-wrap">
+              <h3 className="text-xl font-bold text-[#800020] whitespace-nowrap">
+                Rezha Octaryanto
+              </h3>
+              <span className="text-gray-400 text-sm whitespace-nowrap">
+                (Universitas Gadjah Mada)
+              </span>
             </div>
           </div>
 
@@ -63,11 +79,16 @@ function About() {
             <div className="w-24 h-24 mx-auto bg-[#800020]/20 rounded-full flex items-center justify-center mb-4">
               <i className="ri-ai-generate ri-2x text-[#800020]"></i>
             </div>
-            <div className="flex justify-center items-baseline gap-2">
-              <h3 className="text-xl font-bold text-[#800020]">Safira Fabilia</h3>
-              <p className="text-gray-400 text-sm">(Institut Teknologi Bandung)</p>
+            <div className="flex justify-center items-center gap-2 flex-wrap">
+              <h3 className="text-xl font-bold text-[#800020] whitespace-nowrap">
+                Safira Fabilia
+              </h3>
+              <span className="text-gray-400 text-sm whitespace-nowrap">
+                (Institut Teknologi Bandung)
+              </span>
             </div>
           </div>
+
         </div>
       </div>
     </section>
