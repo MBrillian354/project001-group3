@@ -4,7 +4,6 @@ import { Provider } from 'react-redux';
 import store from './store';
 import Home from './Home';
 import About from './About';
-import Data from './Data';
 import Posts from './Posts';
 import PostDetail from './postDetails';
 import Create from './Create';
@@ -19,7 +18,6 @@ function App() {
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/about" element={<About />} />
-              <Route path="/data" element={<Data />} />
               <Route path="/posts" element={<Posts />} />
               <Route path="/post/:id" element={<PostDetail />} />
               <Route path="/create" element={<Create />} />
