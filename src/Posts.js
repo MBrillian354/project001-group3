@@ -19,6 +19,7 @@ function Posts() {
                 <Link to="/">Home</Link>
                 <Link to="/about">About</Link>
                 <Link to="/data">Data</Link>
+<Link to="/posts">Data</Posts>
             </nav>
             {status === 'loading' && <p>Loading posts...</p>}
             {status === 'failed' && <p>Failed to load posts.</p>}
