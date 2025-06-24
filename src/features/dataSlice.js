@@ -9,9 +9,17 @@ export const fetchData = createAsyncThunk('data/fetchData', async () => {
   return data;
 });
 
+export const fetchPosts = createAsyncThunk('data/fetchPosts', async () => {
+  const response = await fetch('https://jsonplaceholder.typicode.com/posts?_limit=10');
+  const data = await response.json();
+  return data;
+});
+
 const initialState = {
   value: JSON.parse(localStorage.getItem('apiData')) || null,
   status: 'idle',
+  posts: [],
+  postsStatus: 'idle',
 };
 
 const dataSlice = createSlice({
@@ -29,6 +37,16 @@ const dataSlice = createSlice({
       })
       .addCase(fetchData.rejected, (state) => {
         state.status = 'failed';
+      })
+      .addCase(fetchPosts.pending, (state) => {
+        state.postsStatus = 'loading';
+      })
+      .addCase(fetchPosts.fulfilled, (state, action) => {
+        state.postsStatus = 'succeeded';
+        state.posts = action.payload;
+      })
+      .addCase(fetchPosts.rejected, (state) => {
+        state.postsStatus = 'failed';
       });
   },
 });

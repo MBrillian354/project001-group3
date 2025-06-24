@@ -5,6 +5,7 @@ import store from './store';
 import Home from './Home';
 import About from './About';
 import Data from './Data';
+import Posts from './Posts';
 import './App.css';
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
               <Route path="/" element={<Home />} />
               <Route path="/about" element={<About />} />
               <Route path="/data" element={<Data />} />
+              <Route path="/posts" element={<Posts />} />
             </Routes>
           </header>
         </div>
