@@ -27,7 +27,6 @@ function Create() {
   return (
     <div className="container">
       <h2>Create Post</h2>
-      <Navigation />
 
       <form onSubmit={handleSubmit} className="form">
         <label>

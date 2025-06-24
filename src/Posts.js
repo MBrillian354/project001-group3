@@ -26,7 +26,6 @@ function Posts() {
     return (
         <div className="container" style={{ maxWidth: 1200, margin: '0 auto', padding: '1rem' }}>
             <h2>Posts</h2>
-            <Navigation />
             {status === 'loading' && <p>Loading posts...</p>}
             {status === 'failed' && <p>Failed to load posts.</p>}
             <div
