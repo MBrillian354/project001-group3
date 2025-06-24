@@ -20,7 +20,6 @@ function App() {
             <nav className="flex space-x-6">
               <Link to="/" className="nav-link text-white hover:text-[#800020]">Home</Link>
               <Link to="/about" className="nav-link text-white hover:text-[#800020]">About</Link>
-              <Link to="/data" className="nav-link text-white hover:text-[#800020]">Data</Link>
               <Link to="/posts" className="nav-link text-white hover:text-[#800020]">Posts</Link>
               <Link to="/create" className="nav-link text-white hover:text-[#800020]">Create</Link>
             </nav>

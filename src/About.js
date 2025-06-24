@@ -65,7 +65,7 @@ function About() {
             </div>
             <div className="flex justify-center items-baseline gap-2">
               <h3 className="text-xl font-bold text-[#800020]">Safira Fabilia</h3>
-              <p className="text-gray-400 text-sm">(Universitas Teknologi Bandung)</p>
+              <p className="text-gray-400 text-sm">(Institut Teknologi Bandung)</p>
             </div>
           </div>
         </div>
