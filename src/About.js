@@ -1,16 +1,21 @@
-// src/About.js
 import React from 'react';
-import { Link } from 'react-router-dom';
 
 function About() {
-  return (
-    <section id="about" className="bg-black py-20">
-      <div className="max-w-7xl mx-auto px-6">
-        <h2 className="text-3xl md:text-5xl font-bold mb-16 text-center">
-          <span className="text-white">About </span>
-          <span className="text-[#800020]">Us</span>
-        </h2>
+  const members = [
+    { name: 'Muhammad Brillian Syifa Qolbi', university: 'University of Singaperbangsa Karawang' },
+    { name: 'Muhammad Yusuf Firizki', university: 'President University' },
+    { name: 'Ni Putu Dadia Yasuarini', university: 'President University' },
+    { name: 'Rezha Octaryanto', university: 'Universitas Gadjah Mada' },
+    { name: 'Safira Fabilia', university: 'Institut Teknologi Bandung' },
+  ];
 
+  return (
+    <div className="container">
+      <h2 style={{ color: '#E2E2B6' }}>
+        About Us <span style={{ color: '#6EACDA' }}></span>
+      </h2>
+
+<<<<<<< Updated upstream
         {/* Team Members Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 justify-items-center">
 
@@ -90,8 +95,17 @@ function About() {
           </div>
 
         </div>
+=======
+      <div className="team-grid">
+        {members.map((member, i) => (
+          <div className="team-member" key={i}>
+            <h3>{member.name}</h3>
+            <p>{member.university}</p>
+          </div>
+        ))}
+>>>>>>> Stashed changes
       </div>
-    </section>
+    </div>
   );
 }
 
