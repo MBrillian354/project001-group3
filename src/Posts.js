@@ -19,7 +19,7 @@ function Posts() {
                 <Link to="/">Home</Link>
                 <Link to="/about">About</Link>
                 <Link to="/data">Data</Link>
-                <Link to="/posts">Posts</Link> {/* Fixed closing tag */}
+                <Link to="/posts">Posts</Link>
             </nav>
             {status === 'loading' && <p>Loading posts...</p>}
             {status === 'failed' && <p>Failed to load posts.</p>}
@@ -33,24 +33,32 @@ function Posts() {
                 }}
             >
                 {posts && posts.map(post => (
-                    <div
+                    <Link
+                        to={`/post/${post.id}`}
                         key={post.id}
                         style={{
-                            background: '#1a1f26',
-                            borderRadius: 8,
-                            padding: '1.5rem',
-                            minWidth: 0,
-                            boxShadow: '0 2px 8px #0002',
-                            display: 'flex',
-                            flexDirection: 'column',
-                            gap: '0.5rem',
+                            textDecoration: 'none',
+                            color: 'inherit',
                         }}
                     >
-                        <div style={{ color: '#6EACDA', fontWeight: 600, fontSize: '1.1rem' }}>Title:</div>
-                        <h3 style={{ color: '#cbd5e1', margin: 0, fontSize: '1.2rem', wordBreak: 'break-word' }}>{post.title}</h3>
-                        <div style={{ color: '#6EACDA', fontWeight: 600, fontSize: '1.1rem', marginTop: '0.5rem' }}>Post:</div>
-                        <p style={{ color: '#cbd5e1', margin: 0, wordBreak: 'break-word' }}>{post.body}</p>
-                    </div>
+                        <div
+                            style={{
+                                background: '#1a1f26',
+                                borderRadius: 8,
+                                padding: '1.5rem',
+                                minWidth: 0,
+                                boxShadow: '0 2px 8px #0002',
+                                display: 'flex',
+                                flexDirection: 'column',
+                                gap: '0.5rem',
+                            }}
+                        >
+                            <div style={{ color: '#6EACDA', fontWeight: 600, fontSize: '1.1rem' }}>Title:</div>
+                            <h3 style={{ color: '#cbd5e1', margin: 0, fontSize: '1.2rem', wordBreak: 'break-word' }}>{post.title}</h3>
+                            <div style={{ color: '#6EACDA', fontWeight: 600, fontSize: '1.1rem', marginTop: '0.5rem' }}>Post:</div>
+                            <p style={{ color: '#cbd5e1', margin: 0, wordBreak: 'break-word' }}>{post.body}</p>
+                        </div>
+                    </Link>
                 ))}
             </div>
         </div>
