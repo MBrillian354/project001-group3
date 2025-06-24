@@ -8,7 +8,7 @@ function About() {
       <nav>
         <Link to="/">Home</Link>
         <Link to="/data">Data</Link>
-<Link to="/posts">Data</Posts>
+        <Link to="/posts">Posts</Link> 
       </nav>
       <p>This app demonstrates a simple pattern for using Redux and React Router together.</p>
     </div>

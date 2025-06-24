@@ -8,8 +8,7 @@ function Home() {
       <nav>
         <Link to="/about">About</Link>
         <Link to="/data">Data</Link>
-<Link to="/posts">Data</Posts>
-        <Link to="/posts">Posts</Link>
+        <Link to="/posts">Posts</Link> {/* Fixed closing tag */}
       </nav>
       <p>This is a minimal React + Redux + Router demo.</p>
     </div>
