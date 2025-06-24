@@ -9,16 +9,13 @@ function Posts() {
     const posts = useSelector((state) => state.data.posts);
     const status = useSelector((state) => state.data.postsStatus);
 
-    // Get user-created posts from localStorage
     const localPosts = JSON.parse(localStorage.getItem('localPosts') || '[]');
 
-    // Combine fetched posts and local posts (local posts last, so they appear newest)
-    // If fetched posts have 'id', assign unique ids to local posts
     const allPosts = [
         ...(Array.isArray(posts) ? posts : []),
         ...localPosts.map((post, idx) => ({
             ...post,
-            id: `local-${idx}` // Ensure unique key for React
+            id: `local-${idx}` 
         }))
     ];
 
