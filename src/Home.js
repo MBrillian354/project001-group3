@@ -1,14 +1,21 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import Navigation from './Navigation';
 
 function Home() {
   return (
-    <div className="container">
-      <h1>React Router + Redux + API Example</h1>
-      <h2>Welcome to QuickPost</h2>
-      <Navigation />
-      <p>This is a minimal React + Redux + Router demo.</p>
+    <div className="App">
+      {/* Hero Section */}
+      <section className="hero-section">
+        <div className="hero-content">
+          <h1>Simple React Project</h1>
+          <p>Created by IDK</p>
+          <button className="explore-button">Explore Features</button>
+        </div>
+      </section>
+
+      {/* Footer */}
+      <footer>
+        <p>&copy; 2025 Group IDK — Simple React Project</p>
+      </footer>
     </div>
   );
 }
