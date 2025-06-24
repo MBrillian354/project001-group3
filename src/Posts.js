@@ -77,7 +77,7 @@ function Posts() {
                                 </div>
                                 <div style={{ color: '#6EACDA', fontWeight: 600, fontSize: '1.1rem' }}>Title:</div>
                                 <h3 style={{ color: '#cbd5e1', margin: 0, fontSize: '1.2rem', wordBreak: 'break-word' }}>{post.title}</h3>
-                                <div style={{ color: '#6EACDA', fontWeight: 600, fontSize: '1.1rem', marginTop: '0.5rem', marginTop: '1rem', }}>Post:</div>
+                                <div style={{ color: '#6EACDA', fontWeight: 600, fontSize: '1.1rem', marginTop: '1rem', }}>Post:</div>
                                 <p style={{ color: '#cbd5e1', margin: 0, wordBreak: 'break-word' }}>{post.body}</p>
                             </div>
                         </Link>
