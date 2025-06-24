@@ -12,11 +12,10 @@ function Home() {
           <img
             src="/logo.jpg"
             alt="Project Logo"
-            style={{ width: '100px', height: 'auto', margin: '8px auto 16px', display: 'block' }}
+            style={{ border:"10px solid white", width: '100px', height: 'auto', margin: '8px auto 16px', display: 'block', borderRadius:"100%" }}
           />
 
           <p>Created by IDK</p>
-          <button className="explore-button">Explore Features</button>
         </div>
       </section>
 

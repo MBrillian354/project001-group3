@@ -8,7 +8,6 @@ import Posts from './Posts';
 import PostDetail from './postDetails';
 import Create from './Create';
 import './App.css';
-import Navigation from './Navigation';
 
 function App() {
   return (
@@ -19,9 +18,9 @@ function App() {
           <header className="fixed top-0 left-0 w-full z-50 bg-[#1A1A1A] shadow-lg border-b border-white/10 flex justify-between items-center px-6 py-4">
             <nav className="flex space-x-6">
               <Link to="/" className="nav-link text-white hover:text-[#800020]">Home</Link>
-              <Link to="/about" className="nav-link text-white hover:text-[#800020]">About</Link>
               <Link to="/posts" className="nav-link text-white hover:text-[#800020]">Posts</Link>
               <Link to="/create" className="nav-link text-white hover:text-[#800020]">Create</Link>
+              <Link to="/about" className="nav-link text-white hover:text-[#800020]">About</Link>
             </nav>
           </header>
 

@@ -72,10 +72,9 @@ ul {
   height: 90vh;
   display: flex;
   justify-content: center;
-  align-items: center;
   position: relative;
   text-align: center;
-  margin-top: 60px;
+  margin-top: 40px;
 }
 
 .hero-overlay {

@@ -2,17 +2,19 @@ import React from 'react';
 import { useSelector } from 'react-redux';
 import { Link, useParams } from 'react-router-dom';
 
-const localPosts = [
-    { id: 1, title: 'Sample Post 1', body: 'This is a sample post content for local testing.' },
-    { id: 2, title: 'Sample Post 2', body: 'Another sample post for demonstration.' },
-];
-
 function PostDetail() {
     const { id } = useParams();
     const posts = useSelector((state) => state.data.posts);
+    // Get user-created posts from localStorage
+    const localPosts = JSON.parse(localStorage.getItem('localPosts') || '[]');
 
-    const post = localPosts.find(post => post.id === parseInt(id)) ||
-                 posts?.find(post => post.id === parseInt(id));
+    // Try to find the post in fetched posts (API) first, then in local posts
+    let post = posts?.find(post => String(post.id) === id);
+    if (!post) {
+        post = localPosts.find((post, idx) =>
+            String(post.id) === id || `local-${idx}` === id
+        );
+    }
 
     return (
         <div
