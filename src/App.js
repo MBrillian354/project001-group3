@@ -9,14 +9,13 @@ import Posts from './Posts';
 import PostDetail from './postDetails';
 import Create from './Create';
 import './App.css';
+import Navigation from './Navigation';
 
 function App() {
   return (
     <Provider store={store}>
       <Router>
         <div className="App">
-          <header className="App-header">
-            <h1>React Router + Redux + API Example</h1>
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/about" element={<About />} />
@@ -25,7 +24,6 @@ function App() {
               <Route path="/post/:id" element={<PostDetail />} />
               <Route path="/create" element={<Create />} />
             </Routes>
-          </header>
         </div>
       </Router>
     </Provider>

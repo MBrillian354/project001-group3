@@ -1,17 +1,13 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import Navigation from './Navigation';
 
 function Home() {
   return (
     <div className="container">
+      <h1>React Router + Redux + API Example</h1>
       <h2>Welcome to QuickPost</h2>
-      <nav>
-        <Link to="/about">About</Link>
-        <Link to="/data">Data</Link>
-        <Link to="/posts">Posts</Link> {/* Fixed closing tag */}
-        <Link to="/create">Create</Link>
-
-      </nav>
+      <Navigation />
       <p>This is a minimal React + Redux + Router demo.</p>
     </div>
   );

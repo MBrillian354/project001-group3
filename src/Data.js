@@ -2,6 +2,7 @@ import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchData } from './features/dataSlice';
 import { Link } from 'react-router-dom';
+import Navigation from './Navigation';
 
 function Data() {
   const dispatch = useDispatch();
@@ -11,11 +12,7 @@ function Data() {
   return (
     <div className="container">
       <h2>Data</h2>
-      <nav>
-        <Link to="/">Home</Link>
-        <Link to="/about">About</Link>
-        <Link to="/create">Create</Link>
-      </nav>
+      <Navigation />
       <button onClick={() => dispatch(fetchData())} disabled={status === 'loading'}>
         {status === 'loading' ? 'Loading...' : 'Fetch Data'}
       </button>

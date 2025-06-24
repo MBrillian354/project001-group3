@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchPosts } from './features/dataSlice';
 import { Link } from 'react-router-dom';
+import Navigation from './Navigation';
 
 function Posts() {
     const dispatch = useDispatch();
@@ -28,13 +29,7 @@ function Posts() {
     return (
         <div className="container" style={{ maxWidth: 1200, margin: '0 auto', padding: '1rem' }}>
             <h2>Posts</h2>
-            <nav>
-                <Link to="/">Home</Link>
-                <Link to="/about">About</Link>
-                <Link to="/data">Data</Link>
-                <Link to="/posts">Posts</Link>
-                <Link to="/create">Create</Link>
-            </nav>
+            <Navigation />
             {status === 'loading' && <p>Loading posts...</p>}
             {status === 'failed' && <p>Failed to load posts.</p>}
             <div
