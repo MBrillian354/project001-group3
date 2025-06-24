@@ -3,12 +3,13 @@ import { Link } from 'react-router-dom';
 
 function About() {
   return (
-    <div>
-      <h2>About Page</h2>
+    <div className="container">
+      <h2>About</h2>
       <nav>
-        <Link to="/">Home</Link> | <Link to="/data">Data</Link>
+        <Link to="/">Home</Link>
+        <Link to="/data">Data</Link>
       </nav>
-      <p>This is a sample React app with Router, Redux, and API access.</p>
+      <p>This app demonstrates a simple pattern for using Redux and React Router together.</p>
     </div>
   );
 }
