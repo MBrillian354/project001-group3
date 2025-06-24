@@ -15,11 +15,19 @@ export const fetchPosts = createAsyncThunk('data/fetchPosts', async () => {
   return data;
 });
 
+export const fetchComments = createAsyncThunk('data/fetchComments', async (postId) => {
+  const response = await fetch(`https://jsonplaceholder.typicode.com/posts/${postId}/comments`);
+  const data = await response.json();
+  return { postId, comments: data };
+});
+
 const initialState = {
   value: JSON.parse(localStorage.getItem('apiData')) || null,
   status: 'idle',
   posts: [],
   postsStatus: 'idle',
+  commentsByPost: {},
+  commentsStatus: 'idle',
   localPosts: JSON.parse(localStorage.getItem('localPosts')) || [],
 };
 
@@ -53,6 +61,16 @@ const dataSlice = createSlice({
       })
       .addCase(fetchPosts.rejected, (state) => {
         state.postsStatus = 'failed';
+      })
+      .addCase(fetchComments.pending, (state) => {
+        state.commentsStatus = 'loading';
+      })
+      .addCase(fetchComments.fulfilled, (state, action) => {
+        state.commentsStatus = 'succeeded';
+        state.commentsByPost[action.payload.postId] = action.payload.comments;
+      })
+      .addCase(fetchComments.rejected, (state) => {
+        state.commentsStatus = 'failed';
       })
   },
 });

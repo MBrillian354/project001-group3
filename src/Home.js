@@ -15,7 +15,7 @@ function Home() {
             style={{ border:"10px solid white", width: '100px', height: 'auto', margin: '8px auto 16px', display: 'block', borderRadius:"100%" }}
           />
 
-          <p>Created by IDK</p>
+          <p style={{textAlign:'center'}}>Created by IDK</p>
         </div>
       </section>
 
